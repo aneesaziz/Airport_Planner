@@ -3,9 +3,10 @@ from django.utils import timezone
 # Create your models here.
 
 class Unit(models.Model):
-    positions=models.CharField(max_length=30,primary_key=True)
+    unit_name=models.CharField(max_length=30,primary_key=True)
+    positions=models.CharField(max_length=30)
     def __str__(self):
-        return  self.positions
+        return  self.unit_name
 
 
 class Employee(models.Model):
